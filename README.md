@@ -23,7 +23,7 @@ Simulated data representing weekly sales (not shared due to confidentiality). Da
 - Deploy as a Shiny app (optional)
 
 ## 🔍 Sample Output (screenshot or chart)
-[Insert plot here]
+<img width="1281" height="526" alt="ForecastResults" src="https://github.com/user-attachments/assets/9e2d66b1-ba24-4c1b-92c3-96a926af29bf" />
 
 ## 📬 Contact
 alexablanc@github | [LinkedIn](your-link)
