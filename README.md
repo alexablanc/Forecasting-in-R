@@ -14,7 +14,7 @@ Simulated data representing weekly sales (not shared due to confidentiality). Da
 - Model evaluation with visualizations
 
 ## 📁 Files
-- `R_Sales_Projections.R`: R script with forecasting logic
+- `Sales_Projections.R`: R script with forecasting logic
 - `README.md`: Project overview
 
 ## 🧩 Next Steps
