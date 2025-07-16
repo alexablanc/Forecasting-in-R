@@ -1,0 +1,33 @@
+'This was used for a margin calculator for single serve and multi serve chips
+
+Sub Margin_Calculator()
+ 
+' s is single and m is multi percent sales mix
+Dim s, m As Double
+ 
+'Get input
+s = Val(InputBox("Enter single percent mix. Ex 5.0. Current percent is already in the box.", "Margin Calculator", (Worksheets("Sheet1").Range("E4").Value * 100))) / 100
+m = Val(InputBox("Enter multi percent mix. Ex 3.0. Current percent is already in the box.", "Margin Calculator", (Worksheets("Sheet1").Range("E3").Value * 100))) / 100
+ 
+'Show output to Excel
+Cells(55, 4) = Cells(5, 4).Value
+Cells(54, 7).Value = m
+Cells(55, 7).Value = s
+Cells(53, 7).Value = 1 - m - s
+Cells(56, 7).Value = m + s + (1 - m - s)
+ 
+'For loop for Sales $
+For i = 53 To 55 Step 1
+Cells(i, 6) = Worksheets("Sheet1").Range("D5").Value * Cells(i, 7).Value
+Next i
+ 
+Cells(53, 4) = Cells(5, 4) & " Salty Assumption"
+Cells(53, 11).Value = Worksheets("Sheet1").Range("I2").Value
+Cells(54, 11).Value = Worksheets("Sheet1").Range("I3").Value
+Cells(55, 11).Value = Worksheets("Sheet1").Range("I4").Value
+Cells(56, 11).Value = Cells(56, 8).Value / Cells(56, 6).Value
+Cells(58, 8).Value = Cells(56, 8).Value - Worksheets("Sheet1").Range("F5").Value
+Cells(58, 11).Value = (Cells(56, 11).Value - Worksheets("Sheet1").Range("I5").Value) * 10000
+Cells(60, 8).Value = 2 * Cells(58, 8).Value
+ 
+End Sub
